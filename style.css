@@ -1,0 +1,527 @@
+.navbar-brand img {
+    height: 80px;
+    object-fit: contain;
+  }
+
+  /* Adjust logo spacing */
+.navbar-brand {
+  margin-left: 1rem; /* Pushes logo right from the very edge */
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    margin-left: 2.5rem; /* On large screens, push a bit more */
+  }
+
+  .navbar .d-lg-flex.gap-3 {
+    margin-right: 2.5rem; /* Pull socials in from far edge */
+  }
+}
+
+  section {
+    scroll-margin-top: 120px; /* or match navbar height */
+  }
+  
+
+  /* couleur de navbar */
+  .navbar {
+    background-color: #f8f9fa; /* Bootstrap’s built-in light gray */
+  }
+  
+  /* style de navbar */
+  .nav-link,
+  .navbar-brand,
+  .navbar-toggler,
+  .navbar .fab {
+    color: #1c1c1c !important; /* readable dark text */
+  }
+  
+    /* font de google avec link dans le html */
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+      /* user know where they are */
+  .nav-link.active {
+    font-weight: bold;
+    border-bottom: 2px solid #1c1c1c;
+  }
+  
+  header.sticky-top {
+    z-index: 1050; /* higher than carousel, overlays, etc. */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* subtle dark layer */
+  }
+
+    /* navbar hover effect */
+  .nav-link:hover {
+    color: #007bff; /* Bootstrap blue, or your brand color */
+    text-decoration: underline;
+  }
+  
+    /* navbar mobile optmization */
+  .d-lg-none.align-items-center.gap-3 {
+    margin-left: 0.5rem;
+  }
+  
+    /* navbar smooth sections transition */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+    /* tells the browser to use the Inter font (from Google Fonts) as the default font for the entire site. */
+  body {
+    font-family: 'Inter', sans-serif, Arial, Helvetica, sans-serif;
+  }
+
+  
+
+    /* section 1 */
+
+    #section-intro, .hero-image {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    #section-intro {
+        background-color: #f5fafd; /* very light water-tone blue */
+        color: #1c1c1c;
+      }
+      
+      #section-intro h2 {
+        font-weight: 700;
+        font-size: 2rem;
+      }
+      
+      #section-intro p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+      }
+      
+                /* section 2 */
+                
+      #section-why-protect {
+        background-color: #f5fafd; /* same as section 1 */
+      }
+      /* Headings */
+#section-why-protect h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  /* Paragraphs */
+
+  
+  #section-why-protect {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .carousel-item p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem; /* creates space above the dots */
+  }
+  
+  .carousel-indicators [data-bs-target] {
+    background-color: #007bff;
+    bottom: 1rem;
+
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 8%; /* smaller clickable area */
+    opacity: 0.7; /* make them semi-transparent */
+    transition: opacity 0.3s;
+  }
+  
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    opacity: 1; /* fully visible on hover */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0,0,0,0.4); /* translucent black circle */
+    border-radius: 50%;
+  }
+
+  .carousel-caption-custom {
+    font-size: 0.9rem;
+    color: #333; /* dark text, not harsh black */
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+/* Mobile: show full image */
+@media (max-width: 768px) {
+  .carousel-img {
+    object-fit: contain;
+    height: auto;
+    max-height: 300px;
+  }
+}
+
+/* Desktop: show more of the image without full containment */
+@media (min-width: 1200px) {
+  .carousel-img {
+    height: 500px; /* give more vertical room */
+    object-fit: contain; /* or use cover for tighter crop */
+  }
+}
+  
+  
+      
+          /* section 3 */
+/* Timeline section with background image */
+#timeline-section {
+    position: relative;
+    background: url("images/sanmarcos-bw.jpg") no-repeat center center / cover;
+    z-index: 1;
+  }
+  
+  #timeline-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+    z-index: 2;
+  }
+  
+  /* Core timeline */
+  .timeline {
+    position: relative;
+    z-index: 3;
+    margin: 0 auto;
+    padding: 2rem 0;
+    max-width: 900px;
+  }
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #007bff;
+    transform: translateX(-50%);
+  }
+  
+  /* Timeline items */
+  .timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 1.5rem 2rem;
+    box-sizing: border-box;
+  }
+  
+  .timeline-item.left {
+    left: 0;
+    text-align: right;
+  }
+  
+  .timeline-item.right {
+    left: 50%;
+    text-align: left;
+  }
+  
+  .timeline-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    color: #fff;
+    border-left: 4px solid #00bfff;
+  }
+  
+  /* Responsive stacking on mobile */
+  @media (max-width: 768px) {
+    .timeline-item {
+      width: 100%;
+      left: 0 !important;
+      text-align: left !important;
+      margin-bottom: 2rem;
+    }
+  
+    .timeline::before {
+      left: 1rem;
+    }
+  
+    .timeline-content {
+      margin-left: 2rem;
+    }
+  }
+  #timeline-section {
+    position: relative;
+    background: url("images/sanmarcos-bw.jpg") no-repeat center center / cover;
+    color: #fff;
+    z-index: 1;
+  }
+  
+  #timeline-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+    z-index: 2;
+  }
+  
+  #timeline-section .container {
+    position: relative;
+    z-index: 3; /* bring content above overlay */
+  }
+  #timeline-section::before {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: grayscale(100%) blur(2px);
+  }
+  
+    /* section 4 */
+
+  #coalition-section ul {
+    padding-left: 1rem;
+    list-style-type: disc;
+  }
+  
+  #coalition-section h4 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  #coalition-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  
+      /* section 5 */
+      #action-section h4 {
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+      
+      #action-section ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        line-height: 1.6;
+      }
+      
+      #action-section a {
+        color: #007bff;
+        text-decoration: underline;
+      }
+      
+      #action-section a:hover {
+        text-decoration: none;
+      }
+      
+      footer a {
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #fff;
+}
+ 
+
+      /* quiz  */
+      #quiz-coming-soon {
+        background-color: #007bff;
+        color: #f5fafd;
+        padding: 4rem 0; /* Add space above and below */
+        min-height: 300px; /* Ensures ScrollSpy detects it */
+      }
+      
+
+
+      /* footer 5 */
+
+
+footer a {
+    text-decoration: underline;
+  }
+  
+  footer a:hover {
+    color: #fff;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+
+  #quiz-coming-soon {
+    margin-bottom: 0;
+  }
+  
+  #river-section {
+    background-color: #f5fafd;
+  }
+  #action-section {
+    background-color: #f5fafd;
+  }
+  
+  /* Quiz section overrides */
+#quiz-section { background-color: #0056b3 !important; }
+#quiz-section .form-label, 
+#quiz-section .btn-light { color: #fff; }
+#quiz-feedback h4 { color: #fff; }
+
+#quiz-section .btn-light {
+  color: #000 !important;       /* dark text */
+  background-color: #fff;       /* ensure white background */
+  border-color: #dee2e6;        /* default light border */
+}
+
+#quiz-section .form-select {
+  max-width: 400px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+img.img-fluid {
+  max-width: 200px;  /* or whatever fits your layout */
+  height: auto;
+}
+
+#backToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99; /* Make sure it stays on top */
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+#backToTopBtn:hover {
+  background-color: #0056b3;
+}
+
+body, p, a, span, li, label, button, div, input, select {
+  font-family: Georgia, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif;
+  font-weight: bold; /* headlines are bold in newspapers */
+  letter-spacing: 0.5px; /* slight spacing for elegance */
+}
+
+/* Cleanup images full height inside column */
+#cleanup-section img.cleanup-img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Stormwater infographic full width but not stretched weirdly */
+#stormwater-section img.stormwater-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Carousel pollutant images same size */
+#pollutants-section img.pollutant-img {
+  max-height: 400px;
+  object-fit: contain;
+}
+
+/* Center everything cleanly inside carousel */
+#pollutantsCarousel .carousel-inner {
+  align-items: center;
+}
+
+/* Fix carousel button size if needed */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 70% 70%;
+}
+
+
+/* Cleanup images container */
+.cleanup-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background-color: #f5fafd; /* Makes loading nicer */
+  overflow: hidden;
+}
+
+/* Cleanup images */
+.cleanup-image-wrapper img {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Set a maximum height, adjust as needed */
+  display: block;
+  border-radius: 8px;
+}
+
+/* For responsive behavior */
+@media (max-width: 768px) {
+  .cleanup-image-wrapper {
+    margin-bottom: 20px; /* Adds space between stacked images on mobile */
+  }
+}
+
+/* Pollutant carousel image styling */
+#pollutantsCarousel .carousel-item img {
+  max-height: 300px;  /* Increased from original value */
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Ensure carousel container has adequate height */
+#pollutantsCarousel .carousel-inner {
+  min-height: 350px;  /* Ensures consistent height */
+  display: flex;
+  align-items: center;
+}
+
+/* Improve carousel navigation buttons */
+#pollutantsCarousel .carousel-control-prev,
+#pollutantsCarousel .carousel-control-next {
+  width: 10%;  /* Make click targets wider */
+  opacity: 0.8;
+}
+
+/* Make carousel indicators more visible */
+#pollutantsCarousel .carousel-indicators {
+  margin-bottom: 0;
+  position: relative;
+  top: 10px;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  #pollutantsCarousel .carousel-inner {
+    min-height: 300px;  /* Slightly smaller on mobile */
+  }
+  
+  #pollutantsCarousel .carousel-item img {
+    max-height: 250px;  /* Slightly smaller on mobile */
+  }
+}
